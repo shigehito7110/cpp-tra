@@ -13,8 +13,11 @@ int main() {
 
   int result;
   for (int i = 2; i <= N; i++) {
-    result += a[i - 1] + a[i - 2];
+    a[i] = a[i - 1] + a[i - 2];
+
+    cout << i << "項目の数値は" << a[i] << endl;
+    result = a[i];
   }
 
-  cout << result << endl;
+  cout << N << "の数は" << result << endl;
 }
